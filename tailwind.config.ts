@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        primary: ['Inter', ...defaultTheme.fontFamily.sans],
+        primary: ['"Inter"', ...defaultTheme.fontFamily.sans],
+        secondary: [''],
       },
       colors: {
         primary: {
@@ -51,6 +52,9 @@ export default {
         shimmer: 'shimmer 1.3s linear infinite',
       },
     },
+  },
+  future: {
+    hoverOnlyWhenSupported: true,
   },
   plugins: [require('@tailwindcss/forms')],
 } satisfies Config;
