@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
@@ -40,11 +41,12 @@ export default {
       '5xl': ['48px', { lineHeight: '1' }],
       '6xl': ['64px', { lineHeight: '1' }],
     },
-    fontFamily: {
-      'Fira Sans': ['Fira Sans', 'sans-serif'],
-      Oswald: ['Oswald', 'sans-serif'],
-    },
+
     extend: {
+      fontFamily: {
+        fira: ['var(--font-fira-sans)'],
+        oswald: ['var(--font-oswald)'],
+      },
       keyframes: {
         flicker: {
           '0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': {
