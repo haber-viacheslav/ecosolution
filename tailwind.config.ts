@@ -1,29 +1,51 @@
 import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    screens: {
+      sm: { min: '360px', max: '479px' },
+      md: '768px',
+      lg: '1280px',
+    },
+    spacing: {
+      logo: '269px',
+    },
+    colors: {
+      white: '#FFFFFF',
+      black: '#000000',
+      'stone-300': '#BCBCBC',
+      'slate-100': '#F3F5FA',
+      'slate-200': '#EAEDF1',
+      'gray-800': '#173D33',
+      'green-300': '#97D28B',
+      'neutral-200': '#DCEFD8',
+      'zinc-500': '#828382',
+      'zinc-800': '#292D32',
+      'backdrop-bg': '#FFFFFFBF',
+      'burger-bg': '#173D33BF',
+    },
+    fontWeight: {
+      normal: '400',
+      semibold: '600',
+      bold: '700',
+    },
+    fontSize: {
+      xs: ['12px', { lineHeight: '1.2' }],
+      sm: ['14px', { lineHeight: '1.28' }],
+      base: ['16px', { lineHeight: '1.5' }],
+      lg: ['18px', { lineHeight: '1.2' }],
+      xl: ['24px', { lineHeight: '1.2' }],
+      '2xl': ['28px', { lineHeight: '1' }],
+      '4xl': ['36px', { lineHeight: '1' }],
+      '5xl': ['48px', { lineHeight: '1' }],
+      '6xl': ['64px', { lineHeight: '1' }],
+    },
+
     extend: {
       fontFamily: {
-        primary: ['Inter', ...defaultTheme.fontFamily.sans],
-      },
-      colors: {
-        primary: {
-          // Customize it on globals.css :root
-          50: 'rgb(var(--tw-color-primary-50) / <alpha-value>)',
-          100: 'rgb(var(--tw-color-primary-100) / <alpha-value>)',
-          200: 'rgb(var(--tw-color-primary-200) / <alpha-value>)',
-          300: 'rgb(var(--tw-color-primary-300) / <alpha-value>)',
-          400: 'rgb(var(--tw-color-primary-400) / <alpha-value>)',
-          500: 'rgb(var(--tw-color-primary-500) / <alpha-value>)',
-          600: 'rgb(var(--tw-color-primary-600) / <alpha-value>)',
-          700: 'rgb(var(--tw-color-primary-700) / <alpha-value>)',
-          800: 'rgb(var(--tw-color-primary-800) / <alpha-value>)',
-          900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
-          950: 'rgb(var(--tw-color-primary-950) / <alpha-value>)',
-        },
-        dark: '#222222',
+        fira: ['var(--font-fira-sans)'],
+        oswald: ['var(--font-oswald)'],
       },
       keyframes: {
         flicker: {
@@ -51,6 +73,9 @@ export default {
         shimmer: 'shimmer 1.3s linear infinite',
       },
     },
+  },
+  future: {
+    hoverOnlyWhenSupported: true,
   },
   plugins: [require('@tailwindcss/forms')],
 } satisfies Config;
