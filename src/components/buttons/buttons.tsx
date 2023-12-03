@@ -1,15 +1,15 @@
-// import { StyledMenuButton } from '@/components/buttons/buttons.styled';
+import { StyledLogo } from '@/components/links/links.styled';
+
 import {
+  StyledFormSubmitButton,
   StyledMenuButton,
   StyledSliderLeftButton,
   StyledSliderRightButton,
-  StyledFormSubmitButton,
 } from './buttons.styled';
-import { StyledLogo } from '@/components/links/links.styled';
 
-import Menu from '~/svg/menu.svg';
 import Arrow from '~/svg/arrow-left-slider.svg';
 import ArrowRight from '~/svg/arrow-right.svg';
+import Menu from '~/svg/menu.svg';
 
 export const MenuButton = () => {
   return (

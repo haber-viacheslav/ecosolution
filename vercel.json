@@ -1,6 +1,7 @@
 {
   "headers": [
     {
+      "source": "/fonts/fontspring.woff2",
       "headers": [
         {
           "key": "Cache-Control",
