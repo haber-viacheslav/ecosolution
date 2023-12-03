@@ -1,0 +1,37 @@
+export const theme = Object.freeze({
+  fonts: {
+    main: `'Fira Sans', sans-serif`,
+    second: `'Oswald', sans-serif`,
+  },
+  colors: {
+    white: '#FFFFFF',
+    black: '#000000',
+    peach: '#D28B8B',
+    'mid-grey': '#BCBCBC',
+    'normal-grey': '#828382',
+    'dark-grey': '#292D32',
+    'slate-100': '#F3F5FA',
+    'slate-200': '#EAEDF1',
+    'neutral-grey': '#DCEFD8',
+    'dark-green': '#173D33',
+    'light-green': '#97D28B',
+    'backdrop-bg': '#FFFFFFBF',
+    'burger-bg': '#173D33BF',
+    placeholderColor: '#BDBDBD',
+    transparent: 'transparent',
+    currentColor: 'currentColor',
+  },
+  shadows: {
+    mainShadow: '3px 8px 14px rgba(136, 198, 253, 0.19)',
+    secondShadow: '7px 13px 14px rgba(116, 177, 232, 0.24)',
+  },
+  media: {
+    sm: '(min-width: 360px)',
+    md: '(min-width: 768px)',
+    lg: '(min-width: 1280px)',
+    smToM: '(min-width: 360px) and (max-width: 497.99px)',
+    mToMd: '(min-width: 480px) and (max-width: 767.99px)',
+    mdToLg: '(min-width: 768px) and (max-width: 1279.99px)',
+    smToLg: '(min-width: 320px) and (max-width: 1279.99px)',
+  },
+});

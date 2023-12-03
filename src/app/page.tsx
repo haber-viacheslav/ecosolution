@@ -1,37 +1,33 @@
 'use client';
 
 import * as React from 'react';
+import { ThemeProvider } from 'styled-components';
 
-import { oswald } from '@/lib/fonts';
+import { theme } from '@/lib/theme';
 
-import Button from '@/components/buttons/Button';
-import IconButton from '@/components/buttons/IconButton';
-import TextButton from '@/components/buttons/TextButton';
+import { About } from '@/components/About/About';
+import { Cases } from '@/components/Cases/Cases';
+import { ContactUs } from '@/components/ContactUs/ContactUs';
+import { Electricity } from '@/components/Electricity/Electricity';
+import { Faq } from '@/components/Faq/Faq';
+import { Footer } from '@/components/Footer/Footer';
+import { Header } from '@/components/Header/Header';
+import { Main } from '@/components/Main/Main';
 
-/**
- * SVGR Support
- * Caveat: No React Props Type.
- *
- * You can override the next-env if the type is important to you
- * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
- */
-import Logo from '~/svg/Logo.svg';
 export default function HomePage() {
   return (
-    <main className='bg-white'>
-      <section className='bg-white'>
-        <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-          <a href='/'>
-            <Logo className='w-logo h-[]' />
-          </a>
-          <h1 className={`${oswald.variable} mt-4 text-4xl`}>
-            RENEWABLE ENERGY For any task
-          </h1>
-        </div>
-        <Button variant='primary'>Get in touch</Button>
-        <IconButton>Text222</IconButton>
-        <TextButton>Task</TextButton>
-      </section>
-    </main>
+    <ThemeProvider theme={theme}>
+      <Header />
+
+      <main>
+        <Main />
+        <About />
+        <Electricity />
+        <Cases />
+        <Faq />
+        <ContactUs />
+      </main>
+      <Footer />
+    </ThemeProvider>
   );
 }

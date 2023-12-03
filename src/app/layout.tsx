@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang='en' className={`${fira.variable} font-fira`}>
+    <html lang='en' className={`${fira.variable}`}>
       <body>{children}</body>
     </html>
   );
