@@ -7,8 +7,8 @@ import {
   StyledHeader,
   StyledHeaderWrapper,
 } from '@/components/Header/Header.styled';
-import { Logo } from '@/components/Logo/Logo';
 import { GetInTouch } from '@/components/links/links';
+import { Logo } from '@/components/Logo/Logo';
 export const Header = (): JSX.Element => {
   const [color, setColor] = useState('#F3F5FA;');
   useEffect(() => {
