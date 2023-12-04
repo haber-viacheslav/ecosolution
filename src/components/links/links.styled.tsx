@@ -23,10 +23,15 @@ export const StyledLearnMore = styled(Link)`
   align-items: center;
   gap: 12px;
   border-radius: 500px;
+  width: 141px;
+  align-self: center;
   background-color: ${(props) => props.theme.colors.transparent};
   border: 1px solid ${(props) => props.theme.colors['light-green']};
   color: ${(props) => props.theme.colors['dark-green']};
   transition: color 0.3s ease-in, background-color 0.3s ease-in;
+  @media screen and (${(props) => props.theme.media.md}) {
+    align-self: flex-start;
+  }
   &:hover,
   &:focus {
     color: ${(props) => props.theme.colors['light-green']};
@@ -108,5 +113,7 @@ export const StyledLinkToOut = styled(StyledBackToTop)`
 `;
 
 export const StyledContactUs = styled(StyledGetInTouch)`
-  width: 132px;
+  margin: 0 auto;
+  display: flex;
+  width: 134px;
 `;

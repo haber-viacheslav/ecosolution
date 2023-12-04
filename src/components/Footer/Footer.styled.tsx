@@ -5,6 +5,9 @@ export const StyledFooter = styled.footer`
   position: relative;
   width: 100%;
   padding: 24px 0;
+  @media screen and (${(props) => props.theme.media.mdToLg}) {
+    padding: 40px 0;
+  }
   &::before {
     display: block;
     margin: 0 auto;
@@ -35,15 +38,52 @@ export const StyledFooterWrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 16px;
+  @media screen and (${(props) => props.theme.media.md}) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;
+export const StyledWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+  @media screen and (${(props) => props.theme.media.md}) {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 97px;
+    align-items: center;
+  }
+  @media screen and (${(props) => props.theme.media.lg}) {
+    gap: 512px;
+  }
 `;
 export const ContactList = styled.ul`
   display: flex;
   align-items: center;
-
   flex-direction: column;
   gap: 16px;
+  @media screen and (${(props) => props.theme.media.md}) {
+    flex-direction: row;
+    gap: 77px;
+  }
+  @media screen and (${(props) => props.theme.media.lg}) {
+    flex-direction: row;
+    gap: 492px;
+  }
 `;
 export const ContactItem = styled(Link)`
+  color: ${(props) => props.theme.colors['dark-green']};
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.64px;
+`;
+
+export const StyledCopyRight = styled.p`
   color: ${(props) => props.theme.colors['dark-green']};
   font-size: 16px;
   font-style: normal;

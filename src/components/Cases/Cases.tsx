@@ -1,3 +1,3 @@
 export const Cases = () => {
-  return <section id='#cases'></section>;
+  return <section id='cases'></section>;
 };

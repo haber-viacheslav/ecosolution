@@ -40,7 +40,7 @@ export const Form: React.FC = () => {
           onSubmit={handleSubmit}
         >
           {({ errors, touched }) => (
-            <ContactFormStyled autoComplete='off'>
+            <ContactFormStyled id='form' autoComplete='off'>
               <Box>
                 <FormInputWrp>
                   <FormLabel>* Full name:</FormLabel>

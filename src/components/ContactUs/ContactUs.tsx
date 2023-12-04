@@ -22,7 +22,7 @@ import Map from '~/svg/map.svg';
 
 export const ContactUs = () => {
   return (
-    <StyledSection id='#contact'>
+    <StyledSection id='contact'>
       <Container>
         <StyledTitle>Contact Us</StyledTitle>
         <StyledContainer>

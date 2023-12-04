@@ -3,8 +3,6 @@ import { ReactNode } from 'react';
 
 import '@/styles/globals.css';
 
-import { fira } from '@/lib/fonts';
-
 import { siteConfig } from '@/constant/config';
 
 export const metadata: Metadata = {
@@ -25,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang='en' className={`${fira.variable}`}>
+    <html lang='en'>
       <body>{children}</body>
     </html>
   );
