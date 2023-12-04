@@ -4,28 +4,30 @@ import { FooterContainer } from '@/components/Container/Container';
 import {
   ContactItem,
   ContactList,
+  StyledCopyRight,
   StyledFooter,
   StyledFooterWrapper,
+  StyledWrapper,
 } from '@/components/Footer/Footer.styled';
 import { BackToTop } from '@/components/links/links';
 import { Logo } from '@/components/Logo/Logo';
-import { Social } from '@/components/Social/Social';
-
+import { SocialNarrow } from '@/components/Social/Social';
+import { copyrightSymbol } from '@/constant/constant';
+import { year } from '@/helpers/getYear';
 export const Footer = (): JSX.Element => {
-  const date = new Date();
-  const year = date.getFullYear();
-  const copyrightSymbol = '\u00A9';
   return (
     <StyledFooter>
       <FooterContainer>
         <BackToTop />
-        <Logo />
-        <Social variant='narrow' />
+        <StyledWrapper>
+          <Logo />
+          <SocialNarrow />
+        </StyledWrapper>
+
         <StyledFooterWrapper>
           <address>
             <ContactList>
               <li>
-                {' '}
                 <ContactItem
                   href='https://maps.app.goo.gl/VetCRL1nfsCvXd8i7'
                   target='_blank'
@@ -35,16 +37,15 @@ export const Footer = (): JSX.Element => {
                 </ContactItem>
               </li>
               <li>
-                {' '}
                 <ContactItem href='mailto:office@ecosolution.com'>
                   office@ecosolution.com
                 </ContactItem>
               </li>
             </ContactList>
           </address>
-          <p>
+          <StyledCopyRight>
             ecosolution {copyrightSymbol} {year}
-          </p>
+          </StyledCopyRight>
         </StyledFooterWrapper>
       </FooterContainer>
     </StyledFooter>

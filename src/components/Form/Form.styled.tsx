@@ -5,12 +5,13 @@ export const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-
   height: 559px;
   flex-shrink: 0;
   background: ${(props) => props.theme.colors['slate-200']};
 
   @media screen and (${(props) => props.theme.media.md}) {
+    margin-left: auto;
+    margin-right: 0;
     width: 342px;
   }
   @media screen and (${(props) => props.theme.media.lg}) {

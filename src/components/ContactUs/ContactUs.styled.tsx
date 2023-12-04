@@ -3,6 +3,12 @@ import styled from 'styled-components';
 export const StyledSection = styled.section`
   background-color: ${(props) => props.theme.colors.background};
   padding: 36px 0;
+  @media screen and (${(props) => props.theme.media.md}) {
+    padding-top: 100px;
+  }
+  @media screen and (${(props) => props.theme.media.lg}) {
+    padding-top: 100px;
+  }
 `;
 
 export const StyledContainer = styled.div`
@@ -12,11 +18,11 @@ export const StyledContainer = styled.div`
   gap: 24px;
   @media screen and (${(props) => props.theme.media.md}) {
     flex-direction: row;
+    gap: 70px;
   }
 
   @media screen and (${(props) => props.theme.media.lg}) {
     gap: 48px;
-    flex-direction: row;
   }
 `;
 
@@ -67,7 +73,7 @@ export const StyledTitle = styled.h2`
   color: ${(props) => props.theme.colors['dark-green']};
   font-size: 28px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -83,7 +89,7 @@ export const StyledTitle = styled.h2`
 `;
 
 export const StyledSocial = styled(ContactCategory)`
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 `;
 
 export const StyledPhoneList = styled.ul`

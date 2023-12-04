@@ -77,3 +77,30 @@ export const StyledFormSubmitButton = styled.button`
     background-color: ${(props) => props.theme.colors['dark-green']};
   }
 `;
+
+export const StyledCloseButton = styled.button`
+  position: absolute;
+  top: 24px;
+  left: 19px;
+  color: ${(props) => props.theme.colors.white};
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.64px;
+  display: inline-flex;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  z-index: 200;
+  outline: none;
+  border: none;
+  background-color: ${(props) => props.theme.colors.transparent};
+  transition: color 0.3s ease-in;
+  &:hover,
+  &:focus {
+    color: ${(props) => props.theme.colors['light-green']};
+    cursor: pointer;
+  }
+`;

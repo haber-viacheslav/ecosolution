@@ -1,6 +1,6 @@
 import { Container } from '@/components/Container/Container';
 import { Form } from '@/components/Form/Form';
-import { Social } from '@/components/Social/Social';
+import { SocialWide } from '@/components/Social/Social';
 
 import {
   ContactCategory,
@@ -22,7 +22,7 @@ import Map from '~/svg/map.svg';
 
 export const ContactUs = () => {
   return (
-    <StyledSection id='#contact'>
+    <StyledSection id='contact'>
       <Container>
         <StyledTitle>Contact Us</StyledTitle>
         <StyledContainer>
@@ -66,7 +66,7 @@ export const ContactUs = () => {
             </ContactInfo>
             <ContactInfo>
               <StyledSocial>Social Networks:</StyledSocial>
-              <Social variant='wide' />
+              <SocialWide />
             </ContactInfo>
           </ContactList>
           <Form />

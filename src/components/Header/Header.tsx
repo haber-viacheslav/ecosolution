@@ -1,6 +1,6 @@
 import { JSX, useEffect, useState } from 'react';
 
-// import { BurgerMenu } from '@/components/BurgerMenu/BurgerMenu';
+import { BurgerMenu } from '@/components/BurgerMenu/BurgerMenu';
 import { MenuButton } from '@/components/buttons/buttons';
 import { Container } from '@/components/Container/Container';
 import {
@@ -10,7 +10,12 @@ import {
 import { GetInTouch } from '@/components/links/links';
 import { Logo } from '@/components/Logo/Logo';
 export const Header = (): JSX.Element => {
+  const [isShow, setIsShow] = useState(false);
   const [color, setColor] = useState('#F3F5FA;');
+
+  const onClose = () => {
+    return setIsShow(!isShow);
+  };
   useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 112) {
@@ -29,9 +34,10 @@ export const Header = (): JSX.Element => {
       <Container>
         <StyledHeaderWrapper>
           <Logo />
-          <MenuButton />
+          <MenuButton onClick={onClose} />
           <GetInTouch />
         </StyledHeaderWrapper>
+        <BurgerMenu onClick={onClose} isShow={isShow} />
       </Container>
     </StyledHeader>
   );
