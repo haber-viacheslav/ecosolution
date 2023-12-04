@@ -1,131 +1,89 @@
-# Next.js + Tailwind CSS + TypeScript Starter and Boilerplate
+# ECOSOLUTION Landing Page
 
-<div align="center">
-  <h2>🔋 ts-nextjs-tailwind-starter</h2>
-  <p>Next.js + Tailwind CSS + TypeScript starter packed with useful development features.</p>
-  <p>Made by <a href="https://theodorusclarence.com">Theodorus Clarence</a></p>
+## Project Overview
 
-[![GitHub Repo stars](https://img.shields.io/github/stars/theodorusclarence/ts-nextjs-tailwind-starter)](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/stargazers)
-[![Depfu](https://badges.depfu.com/badges/fc6e730632ab9dacaf7df478a08684a7/overview.svg)](https://depfu.com/github/theodorusclarence/ts-nextjs-tailwind-starter?project_id=30160)
-[![Last Update](https://img.shields.io/badge/deps%20update-every%20sunday-blue.svg)](https://shields.io/)
+ECOSOLUTION is a landing page project designed to showcase and promote eco-friendly solutions and products. The project aims to raise awareness about environmental sustainability and encourage users to adopt eco-conscious practices.
 
-</div>
+## Project Structure
 
-## Features
+The project is built using Next.js, a React framework, and follows modern web development best practices. It includes a range of technologies and tools for efficient development and maintenance.
 
-This repository is 🔋 battery packed with:
+## Tech Stack
 
-- ⚡️ Next.js 13 with App Router
-- ⚛️ React 18
-- ✨ TypeScript
-- 💨 Tailwind CSS 3 — Configured with CSS Variables to extend the **primary** color
-- 💎 Pre-built Components — Components that will **automatically adapt** with your brand color, [check here for the demo](https://tsnext-tw.thcl.dev/components)
-- 🃏 Jest — Configured for unit testing
-- 📈 Absolute Import and Path Alias — Import components using `@/` prefix
-- 📏 ESLint — Find and fix problems in your code, also will **auto sort** your imports
-- 💖 Prettier — Format your code consistently
-- 🐶 Husky & Lint Staged — Run scripts on your staged files before they are committed
-- 🤖 Conventional Commit Lint — Make sure you & your teammates follow conventional commit
-- ⏰ Release Please — Generate your changelog by activating the `release-please` workflow
-- 👷 Github Actions — Lint your code on PR
-- 🚘 Automatic Branch and Issue Autolink — Branch will be automatically created on issue **assign**, and auto linked on PR
-- 🔥 Snippets — A collection of useful snippets
-- 👀 Open Graph Helper Function — Awesome open graph generated using [og](https://github.com/theodorusclarence/og), fork it and deploy!
-- 🗺 Site Map — Automatically generate sitemap.xml
-- 📦 Expansion Pack — Easily install common libraries, additional components, and configs.
+Next.js: The core framework for building React applications, providing server-side rendering, and efficient page routing.
+React: A JavaScript library for building user interfaces, offering a modular and component-based approach.
+Styled Components: A popular CSS-in-JS library for styling React components, providing a dynamic and maintainable styling solution.
+Formik and Yup: Used for form handling and validation, making it easy to manage and validate user input.
+Lucide Icons: Utilized for incorporating clean and customizable icons into the project.
+Modern Normalize: A modern alternative to CSS resets, ensuring consistent styling across different browsers.
 
-See the 👉 [feature details and changelog](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/blob/main/CHANGELOG.md) 👈 for more.
+## Development Scripts
 
-You can also check all of the **details and demos** on my blog post:
+dev: Run the development server.
+build: Build the production-ready application.
+start: Start the production server.
+lint: Run linting checks.
+lint:fix: Automatically fix linting issues.
+lint:strict: Run linting checks with a zero-warnings policy.
+typecheck: Typecheck the TypeScript code without emitting files.
+test:watch: Watch for changes and run tests.
+test: Run tests.
+format: Format code using Prettier.
+format:check: Check code formatting.
+postbuild: Generate a sitemap after building the project.
 
-- [One-stop Starter to Maximize Efficiency on Next.js & Tailwind CSS Projects](https://theodorusclarence.com/blog/one-stop-starter)
+## Dependencies
+
+formik: Form library for React applications.
+lucide-react: Icon library for clean and customizable icons.
+modern-normalize: A modern alternative to CSS resets.
+next: React framework for building server-rendered applications.
+react: JavaScript library for building user interfaces.
+react-dom: Entry point to the DOM and server renderers for React.
+react-icons: SVG icons as React components.
+styled-components: CSS-in-JS library for styling React components.
+yup: Schema validation library.
+
+## Development Dependencies
+
+@commitlint/cli: Lint commit messages.
+@commitlint/config-conventional: Configuration for conventional commits.
+@svgr/webpack: Convert SVGs to React components.
+@testing-library/jest-dom: Testing utility for DOM assertions.
+@testing-library/react: Testing utilities for React.
+@types/react: TypeScript type definitions for React.
+@types/styled-components: TypeScript type definitions for Styled Components.
+@typescript-eslint/eslint-plugin: ESLint plugin for TypeScript.
+@typescript-eslint/parser: ESLint parser for TypeScript.
+eslint: Lint JavaScript and TypeScript code.
+eslint-config-next: ESLint configuration for Next.js projects.
+eslint-config-prettier: ESLint configuration for Prettier.
+eslint-plugin-simple-import-sort: ESLint plugin for sorting imports.
+eslint-plugin-unused-imports: ESLint plugin for detecting unused imports.
+husky: Git hooks management.
+jest: JavaScript testing framework.
+lint-staged: Run linters on pre-committed files.
+next-router-mock: Mock Next.js router for testing.
+next-sitemap: Generate sitemap for Next.js projects.
+prettier: Code formatter.
+prettier-plugin-tailwindcss: Prettier plugin for Tailwind CSS.
+typescript: JavaScript superset with static typing.
+
+## Linting and Formatting
+
+Linting and formatting are enforced through ESLint and Prettier to maintain a consistent and clean codebase. The configuration ensures adherence to best practices and coding standards.
+
+## Sitemap Generation
+
+The project includes a post-build script that generates a sitemap using the next-sitemap package. This sitemap is beneficial for SEO purposes.
+
+## Git Hooks
+
+Git hooks are managed using Husky, ensuring that linting and formatting checks are run before each commit.
 
 ## Getting Started
 
-### 1. Clone this template using one of the three ways
-
-1. Use this repository as template
-
-   **Disclosure:** by using this repository as a template, there will be an attribution on your repository.
-
-   I'll appreciate if you do, so this template can be known by others too 😄
-
-   ![Use as template](https://user-images.githubusercontent.com/55318172/129183039-1a61e68d-dd90-4548-9489-7b3ccbb35810.png)
-
-2. Using `create-next-app`
-
-   ```bash
-   npx create-next-app -e https://github.com/theodorusclarence/ts-nextjs-tailwind-starter project-name
-   ```
-
-   If you still want to use **pages directory** (_is not actively maintained_) you can use this command
-
-   ```bash
-   npx create-next-app -e https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/tree/pages-directory project-name
-   ```
-
-3. Using `degit`
-
-   ```bash
-   npx degit theodorusclarence/ts-nextjs-tailwind-starter YOUR_APP_NAME
-   ```
-
-4. Deploy to Vercel
-
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter)
-
-### 2. Install dependencies
-
-It is encouraged to use **yarn** so the husky hooks can work properly.
-
-```bash
-yarn install
-```
-
-### 3. Run the development server
-
-You can start the server using this command:
-
-```bash
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. You can start editing the page by modifying `src/pages/index.tsx`.
-
-### 4. Change defaults
-
-There are some things you need to change including title, urls, favicons, etc.
-
-Don't forget to change the package name in package.json
-
-### 5. Commit Message Convention
-
-This starter is using [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/), it is mandatory to use it to commit changes.
-
-## Projects using ts-nextjs-tailwind-starter
-
-<!--
-TEMPLATE
-- [sitename](https://sitelink.com) ([Source](https://github.com/githublink))
-- [sitename](https://sitelink.com)
--->
-
-- [theodorusclarence.com](https://theodorusclarence.com) ([Source](https://github.com/theodorusclarence/theodorusclarence.com))
-- [Notiolink](https://notiolink.thcl.dev/) ([Source](https://github.com/theodorusclarence/notiolink))
-- [NextJs + Materia UI + Typescript](https://github.com/AlexStack/nextjs-materia-mui-typescript-hook-form-scaffold-boilerplate-starter)
-
-Are you using this starter? Please add your page (and repo) to the end of the list via a [Pull Request](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/edit/main/README.md). 😃
-
-## Expansion Pack 📦
-
-This starter is now equipped with an [expansion pack](https://github.com/theodorusclarence/expansion-pack).
-
-You can easily add expansion such as React Hook Form + Components, Storybook, and more just using a single command line.
-
-<https://user-images.githubusercontent.com/55318172/146631994-e1cac137-1664-4cfe-950b-a96decc1eaa6.mp4>
-
-Check out the [expansion pack repository](https://github.com/theodorusclarence/expansion-pack) for the commands
-
-### App Router Update
-
-Due to App Router update, the expansion pack is currently **outdated**. It will be updated in the future. You can still use them by copy and pasting the files.
+Clone the repository: git clone https://github.com/haber-viacheslav/ecosolution.git
+Install dependencies: yarn install
+Run the development server: yarn dev
+Feel free to explore the codebase, contribute, and make the world a greener place with ECOSOLUTION! 🌍💚
