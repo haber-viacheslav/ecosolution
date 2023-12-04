@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 
 import {
   AccordionContainer,
@@ -10,19 +10,29 @@ import {
 import Plus from '~/svg/add.svg';
 import Minus from '~/svg/minus.svg';
 
-interface AccordionItem {
-  id: number;
-  title: string;
-  content: string;
-  isopen: boolean;
+interface AccordionItemProps {
+  isOpen: boolean;
+  children: ReactNode;
 }
 
+const AccordionItemContent: React.FC<AccordionItemProps> = ({
+  isOpen,
+  children,
+}) => {
+  return (
+    <AccordionContent style={{ display: isOpen ? 'block' : 'none' }}>
+      {children}
+    </AccordionContent>
+  );
+};
+
 interface AccordionProps {
-  items: AccordionItem[];
+  items: { id: number; title: string; content: string }[];
 }
 
 export const Accordion: React.FC<AccordionProps> = ({ items }) => {
   const [activeAccordion, setActiveAccordion] = useState<number | null>(1);
+
   const accordionClickHandle = (id: number) => {
     setActiveAccordion((prevId) => (prevId === id ? null : id));
   };
@@ -42,9 +52,9 @@ export const Accordion: React.FC<AccordionProps> = ({ items }) => {
             )}
             {accordionItem.title}
           </AccordionHeader>
-          <AccordionContent isopen={activeAccordion === accordionItem.id}>
+          <AccordionItemContent isOpen={activeAccordion === accordionItem.id}>
             <p>{accordionItem.content}</p>
-          </AccordionContent>
+          </AccordionItemContent>
         </AccordionItem>
       ))}
     </AccordionContainer>

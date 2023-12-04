@@ -1,10 +1,13 @@
 import styled from 'styled-components';
+
 export const AccordionContainer = styled.ul`
   width: 320px;
   margin-bottom: 36px;
+
   @media screen and (${(props) => props.theme.media.md}) {
     width: 342px;
   }
+
   @media screen and (${(props) => props.theme.media.lg}) {
     width: 596px;
   }
@@ -31,10 +34,12 @@ export const AccordionHeader = styled.button`
   line-height: normal;
   letter-spacing: -0.72px;
   transition: all 0.3s ease;
+
   @media screen and (${(props) => props.theme.media.md}) {
     width: 298px;
     gap: 16px;
   }
+
   @media screen and (${(props) => props.theme.media.lg}) {
     width: 544px;
     font-size: 24px;
@@ -42,7 +47,7 @@ export const AccordionHeader = styled.button`
   }
 `;
 
-export const AccordionContent = styled.div<{ isopen: boolean }>`
+export const AccordionContent = styled.div`
   color: ${(props) => props.theme.colors['dark-green']};
   font-size: 14px;
   font-style: normal;
@@ -50,15 +55,21 @@ export const AccordionContent = styled.div<{ isopen: boolean }>`
   line-height: normal;
   letter-spacing: -0.56px;
   padding: 0 0 10px 16px;
-  display: ${(props) => (props.isopen ? 'block' : 'none')};
+  display: none;
   transition: all 0.3s ease;
+
   @media screen and (${(props) => props.theme.media.md}) {
     padding-left: 24px;
     width: 298px;
   }
+
   @media screen and (${(props) => props.theme.media.lg}) {
     font-size: 16px;
     width: 544px;
     padding-left: 30px;
+  }
+
+  &[data-open='true'] {
+    display: block;
   }
 `;

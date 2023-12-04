@@ -3,6 +3,7 @@ import React from 'react';
 import { StyledLogo } from '@/components/links/links.styled';
 
 import {
+  StyledCloseButton,
   StyledFormSubmitButton,
   StyledMenuButton,
   StyledSliderLeftButton,
@@ -11,6 +12,7 @@ import {
 
 import Arrow from '~/svg/arrow-left-slider.svg';
 import ArrowRight from '~/svg/arrow-right.svg';
+import Close from '~/svg/close.svg';
 import Menu from '~/svg/menu.svg';
 
 interface MenuButtonProps {
@@ -21,6 +23,15 @@ export const MenuButton: React.FC<MenuButtonProps> = ({ onClick }) => {
     <StyledMenuButton onClick={onClick} type='button'>
       <Menu width={16} height={16} />
     </StyledMenuButton>
+  );
+};
+
+export const CloseButton: React.FC<MenuButtonProps> = ({ onClick }) => {
+  return (
+    <StyledCloseButton onClick={onClick} type='button'>
+      <Close width={10} height={10} />
+      close
+    </StyledCloseButton>
   );
 };
 

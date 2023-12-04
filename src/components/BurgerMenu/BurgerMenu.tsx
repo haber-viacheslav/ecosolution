@@ -1,12 +1,15 @@
-import Link from 'next/link';
 import React, { MouseEvent, useEffect, useState } from 'react';
 
 import {
+  MenuLink,
   MenuList,
   MenuWrapper,
   MobileMenu,
 } from '@/components/BurgerMenu/BurgerMenu.styled';
+import { CloseButton } from '@/components/buttons/buttons';
+import { SocialBurger } from '@/components/Social/Social';
 
+import ArrowDiagonal from '~/svg/arrow-right-top.svg';
 interface MenuItem {
   id: number;
   label: string;
@@ -23,11 +26,12 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ onClick, isShow }) => {
 
   const handleNav = () => {
     setNav(!nav);
+    onClick();
   };
 
   useEffect(() => {
     const handleEscDown = (e: KeyboardEvent) => {
-      if (e.code === 'Escape') {
+      if (e.code === 'Escape' && isShow) {
         onClick();
       }
     };
@@ -37,7 +41,7 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ onClick, isShow }) => {
     return () => {
       window.removeEventListener('keydown', handleEscDown);
     };
-  }, [onClick]);
+  }, [onClick, isShow]);
 
   const handleBackdropClick = (e: MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
@@ -55,21 +59,21 @@ export const BurgerMenu: React.FC<BurgerMenuProps> = ({ onClick, isShow }) => {
 
   return isShow ? (
     <MenuWrapper onClick={handleBackdropClick}>
-      <MobileMenu
-        style={{ left: nav ? '0' : '-100%' }}
-        onClick={handleBackdropClick}
-      >
+      <MobileMenu>
+        <CloseButton onClick={onClick} />
         <nav>
           <MenuList>
             {menuItems.map((item) => (
               <li key={item.id}>
-                <Link href={item.href} onClick={handleNav}>
+                <MenuLink href={item.href} onClick={handleNav}>
                   {item.label}
-                </Link>
+                  <ArrowDiagonal width={16} height={16} />
+                </MenuLink>
               </li>
             ))}
           </MenuList>
         </nav>
+        <SocialBurger />
       </MobileMenu>
     </MenuWrapper>
   ) : null;

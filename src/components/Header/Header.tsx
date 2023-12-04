@@ -37,7 +37,7 @@ export const Header = (): JSX.Element => {
           <MenuButton onClick={onClose} />
           <GetInTouch />
         </StyledHeaderWrapper>
-        {/* <BurgerMenu onClick={onClose} isOpen={isOpen} /> */}
+        <BurgerMenu onClick={onClose} isShow={isShow} />
       </Container>
     </StyledHeader>
   );
