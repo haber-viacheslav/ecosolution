@@ -11,7 +11,7 @@ import {
 } from '@/components/Footer/Footer.styled';
 import { BackToTop } from '@/components/links/links';
 import { Logo } from '@/components/Logo/Logo';
-import { Social } from '@/components/Social/Social';
+import { SocialNarrow } from '@/components/Social/Social';
 import { copyrightSymbol } from '@/constant/constant';
 import { year } from '@/helpers/getYear';
 export const Footer = (): JSX.Element => {
@@ -21,7 +21,7 @@ export const Footer = (): JSX.Element => {
         <BackToTop />
         <StyledWrapper>
           <Logo />
-          <Social variant='narrow' />
+          <SocialNarrow />
         </StyledWrapper>
 
         <StyledFooterWrapper>

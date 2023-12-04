@@ -42,7 +42,7 @@ export const AccordionHeader = styled.button`
   }
 `;
 
-export const AccordionContent = styled.div<{ isOpen: boolean }>`
+export const AccordionContent = styled.div<{ isopen: boolean }>`
   color: ${(props) => props.theme.colors['dark-green']};
   font-size: 14px;
   font-style: normal;
@@ -50,7 +50,7 @@ export const AccordionContent = styled.div<{ isOpen: boolean }>`
   line-height: normal;
   letter-spacing: -0.56px;
   padding: 0 0 10px 16px;
-  display: ${(props) => (props.isOpen ? 'block' : 'none')};
+  display: ${(props) => (props.isopen ? 'block' : 'none')};
   transition: all 0.3s ease;
   @media screen and (${(props) => props.theme.media.md}) {
     padding-left: 24px;

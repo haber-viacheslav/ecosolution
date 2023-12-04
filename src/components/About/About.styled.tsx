@@ -1,12 +1,44 @@
 import styled from 'styled-components';
 
-import { Title } from '@/components/Title/Title';
 export const AboutSection = styled.section`
   padding-top: 36px;
 `;
 
-export const AboutTitle = styled(Title)`
-  width: 150px;
+export const StyledWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+
+  @media screen and (${(props) => props.theme.media.md}) {
+    flex-direction: row;
+    gap: 94px;
+    padding: 100px 0;
+  }
+  @media screen and (${(props) => props.theme.media.lg}) {
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 100px 0;
+  }
+`;
+export const AboutTitle = styled.h2`
+  color: ${(props) => props.theme.colors['dark-green']};
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0;
+  width: 320px;
+  @media screen and (${(props) => props.theme.media.md}) {
+    width: 252px;
+    font-size: 36px;
+  }
+  @media screen and (${(props) => props.theme.media.lg}) {
+    width: 365px;
+    font-size: 48px;
+  }
 `;
 export const AboutHeader = styled.div`
   display: flex;
@@ -29,6 +61,7 @@ export const AboutHeaderTitle = styled.h3`
 `;
 
 export const AboutDescription = styled.p`
+  position: relative;
   color: ${(props) => props.theme.colors['dark-green']};
   text-align: justify;
   font-size: 16px;
@@ -37,6 +70,29 @@ export const AboutDescription = styled.p`
   line-height: normal;
   letter-spacing: -0.64px;
   margin-bottom: 36px;
+  @media screen and (${(props) => props.theme.media.md}) {
+    width: 346px;
+    &::before {
+      display: block;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: -11px;
+      transform: translateY(-50%);
+      content: '';
+      width: 1px;
+      height: 110px;
+      background-color: ${(props) => props.theme.colors['light-green']};
+
+      @media screen and (${(props) => props.theme.media.lg}) {
+        height: 87px;
+        left: -161px;
+      }
+    }
+  }
+  @media screen and (${(props) => props.theme.media.lg}) {
+    width: 460px;
+  }
 `;
 
 export const AboutDescr = styled.p`

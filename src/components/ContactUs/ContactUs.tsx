@@ -1,6 +1,6 @@
 import { Container } from '@/components/Container/Container';
 import { Form } from '@/components/Form/Form';
-import { Social } from '@/components/Social/Social';
+import { SocialWide } from '@/components/Social/Social';
 
 import {
   ContactCategory,
@@ -66,7 +66,7 @@ export const ContactUs = () => {
             </ContactInfo>
             <ContactInfo>
               <StyledSocial>Social Networks:</StyledSocial>
-              <Social variant='wide' />
+              <SocialWide />
             </ContactInfo>
           </ContactList>
           <Form />

@@ -1,24 +1,19 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-interface StyledSocialListProps {
-  variant: 'wide' | 'narrow';
-}
-export const StyledSocialList = styled.ul<StyledSocialListProps>`
+
+export const StyledWideList = styled.ul`
   padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  ${({ variant }) =>
-    variant === 'wide' &&
-    `
-   gap: 32px;
-  `}
-
-  ${({ variant }) =>
-    variant === 'narrow' &&
-    `
-    gap: 8px;
-  `}
+  gap: 32px;
+`;
+export const StyledNarrowList = styled.ul`
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 `;
 export const StyledSocialLink = styled(Link)`
   display: inline-flex;

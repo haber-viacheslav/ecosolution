@@ -11,6 +11,7 @@ import {
   AboutList,
   AboutSection,
   AboutTitle,
+  StyledWrap,
 } from '@/components/About/About.styled';
 interface Card {
   id: number;
@@ -27,34 +28,35 @@ interface Card {
 }
 
 export const About = () => {
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 767);
-  const [valuesData] = useState<Card[]>(
-    isMobile ? valuesMobileData : valuesTabletData
-  );
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [valuesData, setValuesData] = useState<Card[]>([]);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 767);
     };
-
     window.addEventListener('resize', handleResize);
-
+    handleResize();
     return () => {
       window.removeEventListener('resize', handleResize);
     };
+  }, []);
+  useEffect(() => {
+    setValuesData(isMobile ? valuesMobileData : valuesTabletData);
   }, [isMobile]);
-
   return (
     <AboutSection id='about'>
       <Container>
-        <AboutTitle>Main values of our company</AboutTitle>
-        <AboutDescription>
-          EcoSolution envisions a world where sustainable energy solutions power
-          a brighter and cleaner future for all. We aspire to be at the
-          forefront of the global shift towards renewable energy, leading the
-          way in innovative technologies that harness the power of nature to
-          meet the world's energy needs.
-        </AboutDescription>
+        <StyledWrap>
+          <AboutTitle>Main values of our company</AboutTitle>
+          <AboutDescription>
+            EcoSolution envisions a world where sustainable energy solutions
+            power a brighter and cleaner future for all. We aspire to be at the
+            forefront of the global shift towards renewable energy, leading the
+            way in innovative technologies that harness the power of nature to
+            meet the world's energy needs.
+          </AboutDescription>
+        </StyledWrap>
         <AboutList>
           {valuesData.map((value) => (
             <AboutItem key={value.id}>

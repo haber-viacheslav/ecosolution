@@ -89,7 +89,7 @@ export const StyledTitle = styled.h2`
 `;
 
 export const StyledSocial = styled(ContactCategory)`
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 `;
 
 export const StyledPhoneList = styled.ul`

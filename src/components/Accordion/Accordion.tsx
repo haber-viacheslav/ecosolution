@@ -14,7 +14,7 @@ interface AccordionItem {
   id: number;
   title: string;
   content: string;
-  isOpen: boolean;
+  isopen: boolean;
 }
 
 interface AccordionProps {
@@ -42,7 +42,7 @@ export const Accordion: React.FC<AccordionProps> = ({ items }) => {
             )}
             {accordionItem.title}
           </AccordionHeader>
-          <AccordionContent isOpen={activeAccordion === accordionItem.id}>
+          <AccordionContent isopen={activeAccordion === accordionItem.id}>
             <p>{accordionItem.content}</p>
           </AccordionContent>
         </AccordionItem>
