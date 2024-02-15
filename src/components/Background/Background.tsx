@@ -10,7 +10,7 @@ export const Background = () => {
         alt='wind-turbine-clean-energy'
         src={main}
         placeholder='blur'
-        quality={100}
+        quality={80}
         sizes='100vw'
         fill
         style={{

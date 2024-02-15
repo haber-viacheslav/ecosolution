@@ -20,12 +20,6 @@ interface Card {
   svg: string;
 }
 import { Container } from '@/components/Container/Container';
-interface Card {
-  id: number;
-  title: string;
-  description: string;
-  svg: string;
-}
 
 export const About = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -72,7 +66,7 @@ export const About = () => {
                     />
                     <AboutHeaderTitle>{value.title}</AboutHeaderTitle>
                   </AboutHeader>
-                  <AboutDescr>{value.description}</AboutDescr>
+                  <AboutDescr>{value.description.toLowerCase()}</AboutDescr>
                 </>
               ) : (
                 <Image

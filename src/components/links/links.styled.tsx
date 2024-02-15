@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 
-export const StyledLogo = styled.div`
+export const StyledLogo = styled.span`
   display: flex;
   padding: 8px;
   justify-content: center;

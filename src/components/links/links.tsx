@@ -18,7 +18,7 @@ export const LearnMore = () => {
     <StyledLearnMore href='/#cases'>
       Learn More
       <StyledLogo>
-        <ArrowRight width='16px' height='16' />
+        <ArrowRight width='16' height='16' />
       </StyledLogo>
     </StyledLearnMore>
   );

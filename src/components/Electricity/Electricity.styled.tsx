@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { StyledTitle } from '@/components/Title/Title.styled';
 
 export const StyledSection = styled.section`
-  padding-top: 36px;
+  padding: 36px 0;
   @media screen and (${(props) => props.theme.media.md}) {
-    padding-top: 100px;
+    padding: 100px 0;
   }
   @media screen and (${(props) => props.theme.media.lg}) {
-    padding-top: 120px;
+    padding: 120px 0;
   }
 `;
 

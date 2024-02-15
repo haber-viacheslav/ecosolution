@@ -1,5 +1,9 @@
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 import '@/styles/globals.css';
 
